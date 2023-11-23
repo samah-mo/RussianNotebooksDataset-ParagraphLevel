@@ -14,6 +14,7 @@ The Dataset in PAGEXML format is available in folder Dataset_PAGE XML files.
 Images could be uploaded directly from the source dataset, all filenames of the proposed dataset corresponds to the source files and can be matched directly. 
 
 Alternatively, you can re-create the dataset by running scropt main.py with the command: 
+
 python main.py
 
 
