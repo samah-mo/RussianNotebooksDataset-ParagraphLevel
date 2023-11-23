@@ -1,0 +1,12 @@
+{
+	"PcGts": {
+		"Metadata": {
+			"Creator": "Samah",
+			"Created": "2022-08-09T12:00:35",
+			"LastChange": "2022-08-09T12:00:35"
+		},
+		"_xmlns": "http://schema.primaresearch.org/PAGE/gts/pagecontent/2018-07-15",
+		"_xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+		"_xsi:schemaLocation": "http://schema.primaresearch.org/PAGE/gts/pagecontent/2018-07-15 http://schema.primaresearch.org/PAGE/gts/pagecontent/2018-07-15/pagecontent.xsd"
+	}
+}
