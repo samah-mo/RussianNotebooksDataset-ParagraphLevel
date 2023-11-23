@@ -1,5 +1,7 @@
 We introduce the first Russian Handwritten dataset on paragraph level.The dataset preparation involved an extensive process leveraging Python scripts and computational methods. Initially, the source dataset—Russian school notebooks' dataset—was chosen for its content suitability and accessibility. 
+
 The link to the source dataset: https://huggingface.co/datasets/ai-forever/school_notebooks_RU
+
 The materials used primarily included this dataset, which contained handwritten texts from contemporary Russian student notebooks. The method involved the extraction of ground truth information initially available at the word level from the source dataset.
 Through a systematic approach, this word-level data was meticulously analyzed, processed, and adapted to construct a comprehensive ground truth at the paragraph level. The procedure consisted of defining text lines, splitting the content into pages, and further segmenting the pages into paragraphs. This process was guided by a robust methodology, ensuring accurate delineation of paragraphs within the handwritten documents.
 
@@ -7,4 +9,5 @@ The ground truth annotations, prepared in PAGEXML format, stood as a cornerstone
 Overall, this methodological approach allowed for the creation of a valuable dataset at the paragraph level, serving as a robust foundation for advancing research in layout-aware handwritten paragraph recognition for Russian documents.
 
 We upload only the PAGEXML files of the prepared dataset on paragraph level, the images are the same in the source datsetset.
+
 To generate the paragraph level dataset, run on terminal: "python main.py"
