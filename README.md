@@ -8,6 +8,12 @@ Through a systematic approach, this word-level data was meticulously analyzed, p
 The ground truth annotations, prepared in PAGEXML format, stood as a cornerstone in this preparation process. The PAGEXML annotation format is known for providing a structured representation of the layout regions within the handwritten documents.PAGEXML provides an organized layout region explanation, offering insights into paragraph structures, text alignments, indentation, and other layout-related information. It allows for a detailed delineation of various elements within the document, such as text lines, thereby enhancing the dataset's utility for training and evaluating recognition models. 
 Overall, this methodological approach allowed for the creation of a valuable dataset at the paragraph level, serving as a robust foundation for advancing research in layout-aware handwritten paragraph recognition for Russian documents.
 
-We upload only the PAGEXML files of the prepared dataset on paragraph level, the images are the same in the source datsetset.
 
-To generate the paragraph level dataset, run on terminal: "python main.py"
+The Dataset in PAGEXML format is available in folder Dataset_PAGE XML files.
+
+Images could be uploaded directly from the source dataset, all filenames of the proposed dataset corresponds to the source files and can be matched directly. 
+
+Alternatively, you can re-create the dataset by running scropt main.py with the command: 
+python main.py
+
+
