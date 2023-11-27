@@ -1,4 +1,3 @@
-import json
 import xml.etree.ElementTree as ET
 import traceback
 
@@ -16,16 +15,7 @@ def add_reading_order(head, reading_order_dict):
     ET.SubElement(order_group, "RegionRefIndexed", regionRef=region["_regionRef"],
                                        index=region["_index"])
 
-def points_to_xml_string(points):
-  points_str = ""
-  for point in points:
-    points_str = points_str + str(point[0]) + "," + str(point[1]) + " "
-  if points_str != "":
-    points_str = points_str[:-1]
-  return points_str
-
 def add_line(head, line_dict):
-  # print(line_dict.keys())
   if "_custom" in line_dict.keys():
     line = ET.SubElement(head, "TextLine", id=line_dict["_id"], custom=line_dict["_custom"])
   else:
@@ -37,7 +27,6 @@ def add_line(head, line_dict):
   text_equiv = ET.SubElement(line, "TextEquiv")
   text = ET.SubElement(text_equiv, "Unicode")
   text.text = line_dict["TextEquiv"]["Unicode"]
-  # print(text.text)
 
 def add_paragraph(head, paragraph_dict):
   paragraph = ET.SubElement(head, "TextRegion", id=paragraph_dict["_id"], custom=paragraph_dict["_custom"],

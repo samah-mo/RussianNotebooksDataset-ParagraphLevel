@@ -1,6 +1,7 @@
 from huggingface_hub import hf_hub_download
 from parse_annotations import parse_annotations
 import os
+import shutil
 import zipfile
 
 def download_school_notebooks_datasets(config):
@@ -17,6 +18,7 @@ def process_dataset(config):
 
     for annotations_json_file in config["json_files"]:
         json_file = os.path.join(config["download_dir"], annotations_json_file)
+
         if "train" in annotations_json_file.lower():
             config["output_sub_folder"] = os.path.join(config["output_folder_name"], "train")
         elif "test" in annotations_json_file.lower():
@@ -25,10 +27,11 @@ def process_dataset(config):
             config["output_sub_folder"] = os.path.join(config["output_folder_name"], "val")
         else:
             config["output_sub_folder"] = os.path.join(config["output_folder_name"], "other")
+
         parse_annotations(json_file, config)
 
-    os.rmdir(os.path.join(config["download_dir"], "images"))
-    os.rmdir(os.path.join(config["download_dir"], "_MACOSX"))
+    shutil.rmtree(os.path.join(config["download_dir"], "images"))
+    shutil.rmtree(os.path.join(config["download_dir"], "__MACOSX"))
 
 if __name__ == '__main__':
     config = {
